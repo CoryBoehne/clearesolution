@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+
+<title>Depression Solutions | CleaResolution</title>
+<style>
+
+
+:root {
+    --primary: #b9d7d0;
+    --secondary: #a8bdc1;
+    --light: #eeeeee;
+    --cta-color: #5e8b95;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: 'Arial', sans-serif;
+    color: #373737;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.nav-item:hover {
+    background-color: var(--secondary);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    white-space: nowrap;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(168, 189, 193, 0.3), rgba(185, 215, 208, 0.3)), 
+                url('./images/image14.jpg') center/cover no-repeat;
+    height: 400px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--cta-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a6f7a;
+}
+
+/* Menu styles */
+#full-menu {
+    transition: opacity 0.3s ease;
+}
+
+#full-menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Hide old menu elements */
+.menu-container,
+.dropdown,
+.dropdown-menu,
+.nav-item {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .menu-container {
+        justify-content: flex-start; /* Align menu items to the left */
+    }
+}
+
+/* Fade effects */
+.fade-in-content {
+    opacity: 0;
+    animation: fadeInContent 1s ease-in-out forwards;
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out-content {
+    animation: fadeOutContent 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOutContent {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Container to center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.centered-image {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+}
+
+
+</style>
+
+
+</head>
+<body>
+<!-- Navigation Bar -->
+
+<nav class="bg-white shadow-lg w-full sticky-nav">
+    <div class="flex items-center justify-between w-full px-4">
+        <!-- Left: Logo -->
+        <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/favicon.png" alt="CleaResolution Logo" class="h-8 md:h-10" style="max-width: 55px; height: auto; margin-right: 0px;">
+                <span style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-size: 3rem; font-weight: 700; white-space: nowrap; margin-left: 4px;" class="text-black">
+                    CleaResolution
+                </span>
+            </a>
+        </div>
+
+        <!-- Center: CTA Button -->
+        <div class="hidden md:block">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+
+        <!-- Right: Hamburger Button -->
+        <button id="menu-toggle" class="p-2">
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Full Screen Menu -->
+<div id="full-menu" class="fixed inset-0 bg-white z-50 hidden">
+    <div class="h-full overflow-y-auto py-16 px-6">
+        <!-- Mobile CTA -->
+        <div class="mb-8 text-center">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="space-y-6">
+            <!-- Our Company -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Our Company</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="about-our-story-animated.html" class="block py-2 text-gray-600 hover:text-gray-900">Our Story</a>
+                    <a href="about-credentials.html" class="block py-2 text-gray-600 hover:text-gray-900">Credentials</a>
+                    <a href="contact.html" class="block py-2 text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+            </div>
+
+            <!-- Transformations -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Transformations</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="cases.html" class="block py-2 text-gray-600 hover:text-gray-900">Cases</a>
+                    <a href="testimonials.html" class="block py-2 text-gray-600 hover:text-gray-900">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Services</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="services-clearesolution.html" class="block py-2 text-gray-600 hover:text-gray-900">CleaResolution</a>
+                    <a href="services-rrt.html" class="block py-2 text-gray-600 hover:text-gray-900">RRT</a>
+                    <a href="services-nlp.html" class="block py-2 text-gray-600 hover:text-gray-900">NLP</a>
+                    <a href="services-hypnosis.html" class="block py-2 text-gray-600 hover:text-gray-900">Hypnosis</a>
+                    <a href="solutions.html" class="block py-2 text-gray-600 hover:text-gray-900">Solutions</a>
+                    <a href="services-coaching.html" class="block py-2 text-gray-600 hover:text-gray-900">Coaching</a>
+                    <a href="events.html" class="block py-2 text-gray-600 hover:text-gray-900">Events</a>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Resources</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="resources-blogs.html" class="block py-2 text-gray-600 hover:text-gray-900">Blogs</a>
+                    <a href="resources-audio.html" class="block py-2 text-gray-600 hover:text-gray-900">Audio</a>
+                    <a href="resources-videos.html" class="block py-2 text-gray-600 hover:text-gray-900">Videos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fade-in-content">
+    
+<!-- Content Section -->
+
+<!-- Hero Section -->
+<div class="hero-section flex items-center justify-center text-center">
+    <div class="max-w-4xl mx-auto px-4 text-white">
+        <h1 class="mb-8 text-8xl" style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-weight: 900;">Break Free from Depression</h1>
+<p class="text-xl mb-8">Take the first step toward a lighter, brighter you. The CleaResolution Method empowers you to rediscover joy and live with clarity.</p>
+</div>
+</div>
+
+<!-- Problem & Solution Section -->
+<div class="py-12 bg-gray-50">
+<div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center">Feeling Stuck? There’s a Way Out</h2>
+    <p class="text-center text-lg mt-4 mb-8">Depression doesn’t have to define you. With the CleaResolution Method, you’ll experience lasting relief without the long wait of traditional approaches.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-6 bg-white shadow-md rounded-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Clear Emotional Barriers</h3>
+            <p>Release pain and limiting patterns that hold you back.</p>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Rediscover Joy</h3>
+            <p>Reconnect with the vibrant, fulfilled version of yourself.</p>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-lg text-center">
+            <h3 class="text-xl font-bold mb-2">Enjoy Quick, Lasting Results</h3>
+            <p>Transform your life in just one session. No endless waiting, no endless talking.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- How It Works Section -->
+<div class="py-12 bg-white">
+<div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-6">How the CleaResolution Method Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col justify-center order-2 md:order-1">
+            <p class="text-lg mb-4">The CleaResolution Method is a revolutionary approach to personal transformation. Using cutting-edge techniques from NLP and advanced cognitive strategies, you’ll experience shifts that are fast, effective, and lasting.</p>
+            <ul class="list-disc pl-5">
+                <li class="mb-2">Experience profound emotional relief in minutes.</li>
+                <li class="mb-2">Overcome negative thought patterns effortlessly.</li>
+                <li>Step into a new chapter of clarity and confidence.</li>
+            </ul>
+            <div class="flex-shrink-0 cta-container mt-6">
+                <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                    Book a Free Consultation
+                </a>
+            </div>
+        </div>
+        <div class="order-1 md:order-2">
+            <img src="./images/depression-relief.jpg" alt="Depression Relief" class="rounded-lg shadow-md">
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Testimonial Section -->
+<div class="py-12 bg-gray-50">
+<div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-6">Real Stories, Real Results</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="mb-4">"Chris’s method didn’t just help me cope—it completely transformed my outlook on life."</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="mb-4">"For the first time in years, I feel hopeful about my future. This process works like magic."</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="mb-4">"I never thought change could happen this fast. One session with Chris gave me back my joy."</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="py-12 bg-gray-50 text-center">
+<h2 class="text-3xl font-bold mb-6">Take the First Step Toward Freedom</h2>
+<p class="text-lg mb-6">Book your free consultation now and discover how the CleaResolution Method can transform your life.</p>
+<div class="flex-shrink-0 cta-container">
+    <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+        Book a Free Consultation
+    </a>
+</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="bg-secondary text-white py-8">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<p>© 2024 CleaResolution. All Rights Reserved.  |  Website Design by <a href="http://www.coryboehne.com">Cory Boehne</a></p>
+<a class="text-white underline" href="https://calendly.com/clearesolution/15min" target="_blank">Book a Free Consultation</a>
+</div>
+</footer>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contentSections = document.querySelectorAll('.fade-in-content, .hero-section'); // Target multiple sections if needed
+
+        contentSections.forEach(content => {
+            if (content) {
+                // Initialize fade-in effect on page load
+                content.classList.add('fade-in-content');
+
+                // Listen for navigation link clicks
+                document.querySelectorAll('a[href$=".html"]').forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        // Only handle internal navigation
+                        if (link.href.includes(window.location.origin)) {
+                            event.preventDefault(); // Prevent default navigation
+                            content.classList.add('fade-out-content'); // Start fade-out animation
+
+                            // Navigate after the animation duration
+                            setTimeout(() => {
+                                window.location.href = link.getAttribute('href');
+                            }, 800); // Ensure this matches your CSS animation duration
+                        }
+                    });
+                });
+
+                // Handle the pageshow event to reset classes when navigating back
+                window.addEventListener('pageshow', (event) => {
+                    content.classList.remove('fade-out-content');
+                    content.classList.add('fade-in-content');
+                });
+            }
+        });
+    });
+</script>
+
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.stopPropagation();  // Prevent click from bubbling up
+        toggleMenu();
+    });
+
+    // Function to handle menu state
+    function toggleMenu(shouldClose = false) {
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const fullMenu = document.getElementById('full-menu');
+        
+        if (shouldClose || !fullMenu.classList.contains('hidden')) {
+            // Close menu
+            fullMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        } else {
+            // Open menu
+            fullMenu.classList.remove('hidden');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Close menu when clicking anywhere in the menu area (except links)
+    document.getElementById('full-menu').addEventListener('click', function(e) {
+        if (e.target === this || e.target.classList.contains('h-full')) {
+            toggleMenu(true);
+        }
+    });
+
+    // Prevent clicks inside menu items from closing the menu
+    document.querySelector('#full-menu .space-y-6').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
+
+</body>
+
+</html>

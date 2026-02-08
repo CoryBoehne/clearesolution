@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+    <title>Intro - CleaResolution</title>
+
+    
+    <style>
+        :root {
+            --primary: #b9d7d0;
+            --secondary: #a8bdc1;
+            --light: #eeeeee;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--primary);
+            font-family: 'Qwitcher Grypen', cursive;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./images/image1.jpg') center/cover no-repeat;
+            opacity: 0;
+            animation: fadeInImage 3s ease-in-out forwards, panBackground 15s linear infinite;
+            background-size: cover;
+            /* Uncomment the next line if you want the image to repeat horizontally */
+            /* background-repeat: repeat-x; */
+        }
+
+        @keyframes fadeInImage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+        @keyframes panBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: --1500px 100; /* Adjust based on image width */
+            }
+        }
+
+        .text-1, .text-2 {
+            font-family: 'Qwitcher Grypen', cursive;
+            color: var(--light);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+
+        .text-1 {
+            font-size: clamp(3rem, 8vw, 9rem); /* Responsive font size */
+            animation: fadeInText 2s ease-in-out 1s forwards, fadeOutText 2s ease-in-out 5s forwards;
+        }
+
+        .text-2 {
+            font-size: 13rem;
+            animation: fadeInText 2s ease-in-out 7s forwards;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeOutText {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .fade-out {
+            animation: fadeOut 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .click-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container"></div>
+    <div class="text-1">Clear Your Mind</div>
+    <div class="text-2">CleaResolution</div>
+    <div class="click-overlay" onclick="triggerFadeOut()"></div>
+
+    <script>
+        // Function to trigger fade-out and navigate
+        function triggerFadeOut() {
+            document.body.classList.add('fade-out'); // Add fade-out class to body
+            setTimeout(() => {
+                window.location.href = 'index-.html'; // Navigate to the target page
+            }, 2000); // Delay matches the fade-out animation duration
+        }
+    
+        // Automatically trigger fade-out after 10 seconds
+        setTimeout(triggerFadeOut, 10000);
+    
+        // Reset content visibility on page load or when navigating back/forward
+        window.addEventListener('pageshow', (event) => {
+            const content = document.querySelector('.fade-in-content');
+            if (content) {
+                // Reset opacity to ensure content is visible
+                content.style.opacity = '1';
+    
+                // Remove fade-out class if navigating back/forward
+                if (event.persisted) {
+                    document.body.classList.remove('fade-out');
+                }
+            }
+        });
+    </script>
+    
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.stopPropagation();  // Prevent click from bubbling up
+        toggleMenu();
+    });
+
+    // Function to handle menu state
+    function toggleMenu(shouldClose = false) {
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const fullMenu = document.getElementById('full-menu');
+        
+        if (shouldClose || !fullMenu.classList.contains('hidden')) {
+            // Close menu
+            fullMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        } else {
+            // Open menu
+            fullMenu.classList.remove('hidden');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Close menu when clicking anywhere in the menu area (except links)
+    document.getElementById('full-menu').addEventListener('click', function(e) {
+        if (e.target === this || e.target.classList.contains('h-full')) {
+            toggleMenu(true);
+        }
+    });
+
+    // Prevent clicks inside menu items from closing the menu
+    document.querySelector('#full-menu .space-y-6').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+<title>CleaResolution</title>
+
+
+<style>
+
+
+/* Global Variables */
+:root {
+    --primary: #b9d7d0;
+    --secondary: #a8bdc1;
+    --light: #eeeeee;
+    --cta-color: #5e8b95;
+}
+
+/* General Styles */
+body {
+    background-color: var(--primary);
+    font-family: 'Arial', sans-serif;
+    color: #373737;
+    animation: fadeInPage 1.2s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out-content {
+    animation: fadeOutContent 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOutContent {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Navigation Styles */
+.nav-item:hover {
+    background-color: var(--secondary);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    white-space: nowrap;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 85vh;
+    background: linear-gradient(rgba(168, 189, 193, 0.3), rgba(185, 215, 208, 0.3)), 
+                url('./images/image1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-section h1 {
+    font-family: 'Qwitcher Grypen', cursive, sans-serif;
+    font-size: 8rem; /* Matches text-8xl */
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button {
+    background-color: var(--cta-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a6f7a;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.menu-container::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-container a {
+    white-space: nowrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .cta-button {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu-container {
+        justify-content: flex-start;
+    }
+}
+
+
+
+/* Container to center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.centered-image {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+
+<nav class="bg-white shadow-lg w-full sticky-nav">
+    <div class="flex items-center justify-between w-full px-4">
+        <!-- Left section with logo (ALL the way left) -->
+        <div class="flex-shrink-0 flex items-center logo-container">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/favicon.png" alt="CleaResolution Logo" class="h-8 md:h-10" style="max-width: 55px; height: auto; margin-right: 0px;">
+                <span
+                    style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-size: 3rem; font-weight: 700; white-space: nowrap; margin-left: 4px;"
+                    class="text-black"
+                >
+                    CleaResolution
+                </span>
+            </a>
+        </div>
+        <!-- Center section with navigation links -->
+<!-- Main Navigation Container --> 
+<div class="hidden md:flex items-center justify-center flex-grow space-x-4 menu-container">
+    
+    <!-- Our Company Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="about.html">
+            Our Company
+        </a>
+        <div class="dropdown-menu">
+            <a href="about-our-story-animated.html">Our Story</a>
+            <a href="about-credentials.html">Credentials</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Transformations Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="transformations.html">
+            Transformations
+        </a>
+        <div class="dropdown-menu">
+            <a href="cases.html">Cases</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+    </div>
+
+    <!-- Services Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="services.html">
+            Services
+        </a>
+        <div class="dropdown-menu">
+            <a href="services-clearesolution.html">CleaResolution</a>
+            <a href="services-rrt.html">RRT</a>
+            <a href="services-nlp.html">NLP</a>
+            <a href="services-hypnosis.html">Hypnosis</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="services-coaching.html">Coaching</a>
+            <a href="events.html">Events</a>
+        </div>
+    </div>
+
+    <!-- Resources Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="resources.html">
+            Resources
+        </a>
+        <div class="dropdown-menu">
+            <a href="resources-blogs.html">Blogs</a>
+            <a href="resources-audio.html">Audio</a>
+            <a href="resources-videos.html">Videos</a>
+        </div>
+    </div>
+
+</div>
+        <!-- Right section with CTA button (ALL the way right) -->
+        <div class="flex-shrink-0 cta-container">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="min-h-screen flex flex-col">
+    <!-- Hero Section -->
+    <div class="hero-section flex flex-col items-center justify-center text-center">
+                <div class="max-w-4xl mx-auto px-4 text-white">
+            <h1 class="mb-8 text-8xl" style="font-family: 'Qwitcher Grypen', cursive; font-weight: 900;">Transform Your Life</h1>
+            <p class="text-xl mb-8">Experience lasting change that goes beyond therapy, NLP, and hypnosis — unlock your true potential, break through limitations, ignite rapid change, and elevate your life</p>
+            <a href="https://calendly.com/clearesolution/15min" target="_blank" class="cta-button">Book a Free Consultation</a>
+        </div>
+    </div>
+
+
+    <!-- Stats Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <h3 class="text-4xl font-bold" style="color: var(--cta-color);">30+</h3>
+                    <p class="text-gray-600">Years Experience</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <h3 class="text-4xl font-bold" style="color: var(--cta-color);">1000+</h3>
+                    <p class="text-gray-600">Satisfied Clients</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <h3 class="text-4xl font-bold" style="color: var(--cta-color);">Worldwide</h3>
+                    <p class="text-gray-600">Via Zoom</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <h3 class="text-4xl font-bold" style="color: var(--cta-color);">15+</h3>
+                    <p class="text-gray-600">Specialties</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+         <!-- Why Choose CleaResolution Section -->
+         <div class="why-choose-section py-12">
+            <h2 class="text-4xl font-bold text-center mb-8">Why Choose CleaResolution Over Traditional Approaches?</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="feature p-6 bg-white shadow-md rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Rooted in NLP technology</h3>
+                    <p>Rooted in NLP technology, CleaResolution refines and enhances the quality of interactions, making communication clearer, more direct, and significantly more meaningful. By leveraging advanced linguistic and neurological principles, CleaResolution deeply aligns with participants' unique needs, creating powerful, personalized, and effective outcomes.</p>
+                </div>
+                <div class="feature p-6 bg-white shadow-md rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4">A New Transformative Approach</h3>
+                    <p>CleaResolution is a transformative conversational approach that leverages precise neurological techniques to directly access and resolve underlying issues, creating profound, lasting change through clear and purposeful dialogue tailored uniquely to each individual's experiences and needs.</p>
+                </div>
+                <div class="feature p-6 bg-white shadow-md rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4">The CleaResolution Advantage</h3>
+                    <p>Traditional therapy often involves lengthy discussions and conscious processing, making it slow, costly, and uncomfortable. The CleaResolution Method, however, employs advanced neurological techniques to rapidly and painlessly install lasting solutions unconsciously—delivering results that are faster, gentler, and far more effective.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+            <!-- Services Grid -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-3">RRT</h3>
+                    <p>Rapid Resolution Therapy for quick, lasting change</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-3">NLP</h3>
+                    <p>Advanced Neuro-Linguistic Programming techniques</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-3">Hypnosis</h3>
+                    <p>Transform your mindset effortlessly</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-3">Coaching</h3>
+                    <p>Personal development and corporate training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        <!-- Meet the Founder Section -->
+        <div class="meet-founder-section py-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Meet the Founder: Chris Richardson</h2>
+            </div>
+            <div class="image-container">
+                <img src="./images/chris.jpg" alt="Centered Image" class="centered-image">
+            </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg mb-6">Chris Richardson is a master in NLP, hypnosis, and other disciplines. His unique teaching style blends diverse expertise, providing transformative experiences for clients and practitioners alike.</p>
+            </div>
+        </div>
+
+
+
+<!-- Client Reviews Section -->
+<div class="reviews-section py-12 bg-gray-100">
+    <h2 class="text-4xl font-bold text-center mb-8">What Our Clients Say</h2>
+    <!-- Google Reviews Grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Skye's Review -->
+        <a href="https://g.co/kgs/A8Tu9Fu" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+            <img src="./images/Google-Review-Logo.png" alt="Google Review Logo" class="mx-auto mb-4 w-32 h-auto">
+            <p>"Chris masterfully supported me using the RRT method to clear a debilitating block impacting my work. I felt renewed peace and clarity after just one session."</p>
+            <p class="font-bold mt-2">- Skye Sinclair</p>
+        </a>
+        <!-- Richie's Review -->
+        <a href="https://g.co/kgs/riNTWWs" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+            <img src="./images/Google-Review-Logo.png" alt="Google Review Logo" class="mx-auto mb-4 w-32 h-auto">
+            <p>"Chris effectively guided me with thorough care. I highly recommend him as a competent practitioner of RRT."</p>
+            <p class="font-bold mt-2">- Richie Budd</p>
+        </a>
+        <!-- Nicholas's Review -->
+        <a href="https://g.co/kgs/J5djHjq" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+            <img src="./images/Google-Review-Logo.png" alt="Google Review Logo" class="mx-auto mb-4 w-32 h-auto">
+            <p>"Chris’s method cleared away intrusive thoughts and helped me focus on what truly mattered. Highly recommended for personal growth."</p>
+            <p class="font-bold mt-2">- Nicholas Owen</p>
+        </a>
+    </div>
+
+    <!-- Yelp Reviews Grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Dennis's Review -->
+        <a href="https://www.yelp.com/biz/clearesolution-plantation?hrid=KdmFbm92ivsN-eWRUAgwsw" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+            <img src="./images/Yelp-Reviews-Logo.png" alt="Yelp Review Logo" class="mx-auto mb-4 w-32 h-auto">
+            <p>"I started seeing Chris during a major mental health crisis. His approach was the most effective therapy I’ve tried, helping me clear deep issues and equipping me with lasting tools for self-understanding."</p>
+            <p class="font-bold mt-2">- Dennis J.</p>
+        </a>
+        <!-- Jeannie's Review -->
+        <a href="https://www.yelp.com/biz/clearesolution-plantation?hrid=pPQxXQtNN-o4M94BEuxrwg" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+            <img src="./images/Yelp-Reviews-Logo.png" alt="Yelp Review Logo" class="mx-auto mb-4 w-32 h-auto">
+            <p>"I hit a wall in my studies and became increasingly depressed. After meeting with Chris, my fears were dispelled, and I felt excited about learning again. His support brought lasting positive change."</p>
+            <p class="font-bold mt-2">- Jeannie H.</p>
+        </a>
+        <!-- Heather's Review -->
+        <a href="https://www.yelp.com/biz/clearesolution-plantation?hrid=3Z94wqT5vO5RPSdaZeXdiQ" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+            <img src="./images/Yelp-Reviews-Logo.png" alt="Yelp Review Logo" class="mx-auto mb-4 w-32 h-auto">
+            <p>"As a biochemist and skeptic, I was amazed by how effective Chris’s session was. It accessed deep emotions more effectively than years of talk therapy or EMDR. I felt significant progress after just one session."</p>
+            <p class="font-bold mt-2">- Heather G.</p>
+        </a>
+    </div>
+</div>
+
+
+<!-- The CleaResolution Difference -->
+<div class="welcome-section py-12 text-center">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6">The CleaResolution Difference</h2>
+        <p class="text-lg mb-6">Your haven for transformative healing and personal empowerment. We specialize in Rapid Resolution Therapy, advanced NLP (Neurolinguistic Programming) changework and training, and hypnosis to help you swiftly overcome emotional barriers and rediscover your inner strength.</p>
+        <div class="quotes-container grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Quote 1 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"Experience lasting relief without the lengthy processes of traditional therapy."</p>
+            </div>
+            <!-- Quote 2 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"Empowerment is within reach—step into a journey of transformation."</p>
+            </div>
+            <!-- Quote 3 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"Unlock your potential; embrace a clearer, brighter you."</p>
+            </div>
+            <!-- Quote 4 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"Transform your life in moments, not months."</p>
+            </div>
+            <!-- Quote 5 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"Step into a future free from limitations."</p>
+            </div>
+            <!-- Quote 6 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"As your mind is clear, you’re free."</p>
+            </div>
+            <!-- Quote 7 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"Get healing now."</p>
+            </div>
+            <!-- Quote 8 -->
+            <div class="quote p-4 bg-gray-100 shadow-md rounded-lg">
+                <p class="italic">"The best feeling is feeling your best."</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+    <!-- How to Get Started Section -->
+    <div class="how-to-start-section py-12 bg-white">
+        <h2 class="text-4xl font-bold text-center mb-8">How to Get Started</h2>
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-lg mb-6">Ready to leave behind what’s troubling you or amplify your strengths? The CleaResolution Method offers a streamlined, effective way to make meaningful changes quickly.</p>
+            
+            <!-- Step 1 -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-2">Step 1: Explore</h3>
+                <p>Learn about what others have experienced and see how quickly we achieve significant results. Check out our testimonials, then book your free 15-minute consultation to start transforming your life together.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-2">Step 2: Decide What You’re Ready to Clear or Enhance</h3>
+                <p>Whether you want to eliminate anxiety, boost your learning abilities, or develop "Superpowers" like enhanced time management, we tailor the process to fit your goals.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">Step 3: Schedule Your Consultation</h3>
+                <p>Book a time that suits your schedule, and get excited for real changes. Email us at <a href="mailto:freeandclearmind@gmail.com" class="text-blue-600">freeandclearmind@gmail.com</a> or use the link below to get started.</p>
+                <div class="mt-6">
+			<a href="https://calendly.com/clearesolution/15min" target="_blank" class="cta-button ">Book Your Free Consultation</a>
+            	</div>
+		</div>
+        </div>
+    </div>
+
+   
+
+
+   
+
+</div>
+
+
+
+</div>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-8">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<p>© 2024 CleaResolution. All Rights Reserved.  |  Website Design by <a href="http://www.coryboehne.com">Cory Boehne</a></p>
+<a class="text-white underline" href="https://calendly.com/clearesolution/15min" target="_blank">Book a Free Consultation</a>
+</div>
+</footer>
+<script>
+    // Apply fade-out effect only to the main content section when leaving the page
+    document.querySelectorAll('a[href$=".html"]').forEach(link => {
+        link.addEventListener('click', event => {
+            const href = link.getAttribute('href');
+            // Prevent navigation if the link is internal and a content fade-out is needed
+            if (!href.includes('#')) {
+                event.preventDefault();
+                const content = document.querySelector('.min-h-screen'); // Main content container
+                if (content) {
+                    content.classList.add('fade-out-content');
+                }
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 800);
+            }
+        });
+    });
+
+    // Ensure animations work with browser history navigation (back/forward button)
+    window.addEventListener('pageshow', (event) => {
+        const content = document.querySelector('.min-h-screen'); // Main content container
+        if (content) {
+            // Remove fade-out effect and reapply fade-in for the content
+            content.classList.remove('fade-out-content');
+            content.classList.add('fade-in-content');
+        }
+    });
+</script>
+
+
+
+</body>
+
+</html>

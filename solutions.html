@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+
+<title>Solutions | CleaResolution</title>
+<style>
+
+
+:root {
+    --primary: #b9d7d0;
+    --secondary: #a8bdc1;
+    --light: #eeeeee;
+    --cta-color: #5e8b95;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: 'Arial', sans-serif;
+    color: #373737;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.nav-item:hover {
+    background-color: var(--secondary);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    white-space: nowrap;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(168, 189, 193, 0.3), rgba(185, 215, 208, 0.3)), 
+                url('./images/image13.jpg') center/cover no-repeat;
+    height: 400px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--cta-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a6f7a;
+}
+
+/* Menu Container: Visibility and Scroll Behavior */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+.menu-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.menu-container a {
+    white-space: nowrap; /* Prevent menu items from wrapping */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .cta-button {
+        display: none; /* Hide CTA button first */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        display: none; /* Hide logo at smaller sizes */
+    }
+}
+
+@media (max-width: 640px) {
+    .menu-container {
+        justify-content: flex-start; /* Align menu items to the left */
+    }
+}
+
+/* Fade effects */
+.fade-in-content {
+    opacity: 0;
+    animation: fadeInContent 1s ease-in-out forwards;
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out-content {
+    animation: fadeOutContent 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOutContent {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Container to center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.centered-image {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+}
+
+
+</style>
+
+
+</head>
+<body>
+<!-- Navigation Bar -->
+
+<nav class="bg-white shadow-lg w-full sticky-nav">
+    <div class="flex items-center justify-between w-full px-4">
+        <!-- Left section with logo (ALL the way left) -->
+        <div class="flex-shrink-0 flex items-center logo-container">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/favicon.png" alt="CleaResolution Logo" class="h-8 md:h-10" style="max-width: 55px; height: auto; margin-right: 0px;">
+                <span
+                    style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-size: 3rem; font-weight: 700; white-space: nowrap; margin-left: 4px;"
+                    class="text-black"
+                >
+                    CleaResolution
+                </span>
+            </a>
+        </div>
+        <!-- Center section with navigation links -->
+<!-- Main Navigation Container --> 
+<div class="hidden md:flex items-center justify-center flex-grow space-x-4 menu-container">
+    
+    <!-- Our Company Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="about.html">
+            Our Company
+        </a>
+        <div class="dropdown-menu">
+            <a href="about-our-story-animated.html">Our Story</a>
+            <a href="about-credentials.html">Credentials</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Transformations Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="transformations.html">
+            Transformations
+        </a>
+        <div class="dropdown-menu">
+            <a href="cases.html">Cases</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+    </div>
+
+    <!-- Services Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="services.html">
+            Services
+        </a>
+        <div class="dropdown-menu">
+            <a href="services-clearesolution.html">CleaResolution</a>
+            <a href="services-rrt.html">RRT</a>
+            <a href="services-nlp.html">NLP</a>
+            <a href="services-hypnosis.html">Hypnosis</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="services-coaching.html">Coaching</a>
+            <a href="events.html">Events</a>
+        </div>
+    </div>
+
+    <!-- Resources Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="resources.html">
+            Resources
+        </a>
+        <div class="dropdown-menu">
+            <a href="resources-blogs.html">Blogs</a>
+            <a href="resources-audio.html">Audio</a>
+            <a href="resources-videos.html">Videos</a>
+        </div>
+    </div>
+
+</div>
+        <!-- Right section with CTA button (ALL the way right) -->
+        <div class="flex-shrink-0 cta-container">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="fade-in-content">
+
+<!-- Content Section -->
+
+<!-- Hero Section -->
+<div class="hero-section flex items-center justify-center text-center">
+    <div class="max-w-4xl mx-auto px-4 text-white">
+        <h1 class="mb-8 text-8xl" style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-weight: 900;">Transformative Solutions</h1>
+        <p class="text-xl mb-8">Discover a range of innovative, effective solutions to help you overcome challenges, unlock your potential, and achieve lasting change.</p>
+    </div>
+</div>
+
+<!-- Solutions Section -->
+<div class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-8">Explore Our Comprehensive Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Add Cards for Each Solution -->
+            <a href="solutions-depression.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Depression</h3>
+                <p>Find relief and reclaim your joy with proven techniques to lift the fog of depression.</p>
+            </a>
+            <a href="solutions-anxiety.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Anxiety</h3>
+                <p>Overcome worry and stress to rediscover peace and clarity in your daily life.</p>
+            </a>
+            <a href="solutions-insomnia.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Insomnia</h3>
+                <p>Experience restful nights and rejuvenated mornings with targeted strategies.</p>
+            </a>
+            <a href="solutions-trauma.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Trauma</h3>
+                <p>Heal from past wounds and move forward with confidence and resilience.</p>
+            </a>
+            <a href="solutions-ptsd.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">PTSD & CPTSD</h3>
+                <p>Release the grip of past events and rediscover peace of mind.</p>
+            </a>
+            <a href="solutions-ocd.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">OCD & Habits</h3>
+                <p>Break free from compulsive patterns and build a life of clarity and control.</p>
+            </a>
+            <a href="solutions-cognative-empowerment.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Memory & Learning</h3>
+                <p>Sharpen your mind, enhance recall, and unleash your learning potential.</p>
+            </a>
+            <a href="solutions-children.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Children's Issues</h3>
+                <p>Support your child’s growth with effective solutions tailored to their needs.</p>
+            </a>
+            <a href="solutions-couples.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Couples' Programs</h3>
+                <p>Strengthen your bond, improve communication, and reignite intimacy.</p>
+            </a>
+            <a href="solutions-dating-relationships.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Dating & Relationships</h3>
+                <p>Build confidence, attract meaningful connections, and create lasting bonds.</p>
+            </a>
+            <a href="solutions-sexual-performance.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Sexual Issues</h3>
+                <p>Enhance confidence and connection by addressing intimacy challenges.</p>
+            </a>
+            <a href="solutions-anger-management.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Anger Management</h3>
+                <p>Transform frustration into calm and control for a balanced life.</p>
+            </a>
+            <a href="solutions-fear-phobias.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Phobias</h3>
+                <p>Conquer fears and move forward with confidence and freedom.</p>
+            </a>
+            <a href="solutions-motivation-confidence.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Motivation & Confidence</h3>
+                <p>Unleash your potential and achieve your goals with clarity and drive.</p>
+            </a>
+            <a href="solutions-grief.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Grief</h3>
+                <p>Find peace and healing while navigating the complexities of loss.</p>
+            </a>
+            <a href="solutions-dyslexia.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Dyslexia</h3>
+                <p>Overcome learning challenges and build confidence with proven strategies.</p>
+            </a>
+            <a href="solutions-tinnitus.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">Tinnitus</h3>
+                <p>Quiet the ringing and restore calm to your daily life.</p>
+            </a>
+            <a href="solutions-tmj.html" class="bg-white p-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+                <h3 class="text-2xl font-bold mb-2">TMJ</h3>
+                <p>Relieve jaw tension and improve comfort for a pain-free life.</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="py-12 bg-white text-center">
+    <h2 class="text-4xl font-bold mb-4">Ready to Begin Your Transformation?</h2>
+    <p class="text-lg mb-6">Take the first step toward a brighter, more empowered future. Schedule your free consultation today and discover how the CleaResolution Method can help you.</p>
+    <div class="flex-shrink-0 cta-container">
+        <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+            Book a Free Consultation
+        </a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-secondary text-white py-8">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<p>© 2024 CleaResolution. All Rights Reserved.  |  Website Design by <a href="http://www.coryboehne.com">Cory Boehne</a></p>
+<a class="text-white underline" href="https://calendly.com/clearesolution/15min" target="_blank">Book a Free Consultation</a>
+</div>
+</footer>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contentSections = document.querySelectorAll('.fade-in-content, .hero-section'); // Target multiple sections if needed
+
+        contentSections.forEach(content => {
+            if (content) {
+                // Initialize fade-in effect on page load
+                content.classList.add('fade-in-content');
+
+                // Listen for navigation link clicks
+                document.querySelectorAll('a[href$=".html"]').forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        // Only handle internal navigation
+                        if (link.href.includes(window.location.origin)) {
+                            event.preventDefault(); // Prevent default navigation
+                            content.classList.add('fade-out-content'); // Start fade-out animation
+
+                            // Navigate after the animation duration
+                            setTimeout(() => {
+                                window.location.href = link.getAttribute('href');
+                            }, 800); // Ensure this matches your CSS animation duration
+                        }
+                    });
+                });
+
+                // Handle the pageshow event to reset classes when navigating back
+                window.addEventListener('pageshow', (event) => {
+                    content.classList.remove('fade-out-content');
+                    content.classList.add('fade-in-content');
+                });
+            }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const content = document.querySelector('.hero-section'); // Main content section
+        if (content) {
+            // Initialize fade effect
+            content.classList.add('fade');
+
+            // Fade in the content on page load or pageshow
+            const fadeIn = () => {
+                content.classList.add('show');
+            };
+
+            window.addEventListener('pageshow', fadeIn);
+            fadeIn();
+
+            // Listen for navigation link clicks
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    // Only fade out for internal navigation
+                    if (link.href.includes(window.location.origin)) {
+                        event.preventDefault();
+                        content.classList.remove('show');
+                        setTimeout(() => {
+                            window.location.href = link.href;
+                        }, 500); // Match the duration of the fade-out effect
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+
+</body>
+
+</html>

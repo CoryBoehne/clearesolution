@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+
+<title>Testimonials | CleaResolution</title>
+<style>
+
+
+:root {
+    --primary: #b9d7d0;
+    --secondary: #a8bdc1;
+    --light: #eeeeee;
+    --cta-color: #5e8b95;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: 'Arial', sans-serif;
+    color: #373737;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.nav-item:hover {
+    background-color: var(--secondary);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    white-space: nowrap;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(168, 189, 193, 0.3), rgba(185, 215, 208, 0.3)), 
+                url('./images/image4.jpg') center/cover no-repeat;
+    height: 400px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--cta-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a6f7a;
+}
+
+/* Menu styles */
+#full-menu {
+    transition: opacity 0.3s ease;
+}
+
+#full-menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Hide old menu elements */
+.menu-container,
+.dropdown,
+.dropdown-menu,
+.nav-item {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .menu-container {
+        justify-content: flex-start; /* Align menu items to the left */
+    }
+}
+
+/* Fade effects */
+.fade-in-content {
+    opacity: 0;
+    animation: fadeInContent 1s ease-in-out forwards;
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out-content {
+    animation: fadeOutContent 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOutContent {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+
+
+/* Container to center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.centered-image {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+}
+
+
+</style>
+
+
+</head>
+<body>
+<!-- Navigation Bar -->
+
+<nav class="bg-white shadow-lg w-full sticky-nav">
+    <div class="flex items-center justify-between w-full px-4">
+        <!-- Left: Logo -->
+        <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/favicon.png" alt="CleaResolution Logo" class="h-8 md:h-10" style="max-width: 55px; height: auto; margin-right: 0px;">
+                <span style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-size: 3rem; font-weight: 700; white-space: nowrap; margin-left: 4px;" class="text-black">
+                    CleaResolution
+                </span>
+            </a>
+        </div>
+
+        <!-- Center: CTA Button -->
+        <div class="hidden md:block">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+
+        <!-- Right: Hamburger Button -->
+        <button id="menu-toggle" class="p-2">
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Full Screen Menu -->
+<div id="full-menu" class="fixed inset-0 bg-white z-50 hidden">
+    <div class="h-full overflow-y-auto py-16 px-6">
+        <!-- Mobile CTA -->
+        <div class="mb-8 text-center">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="space-y-6">
+            <!-- Our Company -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Our Company</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="about-our-story-animated.html" class="block py-2 text-gray-600 hover:text-gray-900">Our Story</a>
+                    <a href="about-credentials.html" class="block py-2 text-gray-600 hover:text-gray-900">Credentials</a>
+                    <a href="contact.html" class="block py-2 text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+            </div>
+
+            <!-- Transformations -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Transformations</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="cases.html" class="block py-2 text-gray-600 hover:text-gray-900">Cases</a>
+                    <a href="testimonials.html" class="block py-2 text-gray-600 hover:text-gray-900">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Services</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="services-clearesolution.html" class="block py-2 text-gray-600 hover:text-gray-900">CleaResolution</a>
+                    <a href="services-rrt.html" class="block py-2 text-gray-600 hover:text-gray-900">RRT</a>
+                    <a href="services-nlp.html" class="block py-2 text-gray-600 hover:text-gray-900">NLP</a>
+                    <a href="services-hypnosis.html" class="block py-2 text-gray-600 hover:text-gray-900">Hypnosis</a>
+                    <a href="solutions.html" class="block py-2 text-gray-600 hover:text-gray-900">Solutions</a>
+                    <a href="services-coaching.html" class="block py-2 text-gray-600 hover:text-gray-900">Coaching</a>
+                    <a href="events.html" class="block py-2 text-gray-600 hover:text-gray-900">Events</a>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Resources</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="resources-blogs.html" class="block py-2 text-gray-600 hover:text-gray-900">Blogs</a>
+                    <a href="resources-audio.html" class="block py-2 text-gray-600 hover:text-gray-900">Audio</a>
+                    <a href="resources-videos.html" class="block py-2 text-gray-600 hover:text-gray-900">Videos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fade-in-content">
+<!-- Hero Section for Testimonials -->
+<div class="hero-section flex items-center justify-center text-center">
+<div class="max-w-4xl mx-auto px-4 text-white">
+<h1 class="mb-8 text-8xl" style="font-family: 'Qwitcher Grypen', cursive; font-weight: 900;">Transformations</h1>
+<p class="text-xl mb-8">Transform your life with CleaResolution</p>
+</div>
+</div>
+<!-- Main Content Section -->
+<div class="min-h-screen bg-white py-16">
+<div class="max-w-6xl mx-auto px-4">
+<!-- Featured TED Talk Section -->
+<div class="mb-16 text-center">
+<h2 class="text-4xl font-bold mb-8">Life-Changing Transformations</h2>
+<p class="text-xl mb-8">You may know my good friend Kristin Rivas from her viral Ted Talk video, The Life Changing Power of Words. Check it out here to learn more about the effectiveness of RRT: <a href="https://youtu.be/joj7_brYWt8?si=u7e_4-wPXJsfrVfm">https://youtu.be/joj7_brYWt8?si=u7e_4-wPXJsfrVfm</a></p>
+<div class="flex justify-center">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="504" src="https://www.youtube.com/embed/M3Z5H0O5tyA?si=VMH7IPGHW7feq3OU" title="YouTube video player" width="896">
+</iframe>
+</div>
+</div>
+    
+    <!-- Client Reviews Section -->
+    <div class="reviews-section py-12 bg-gray-100">
+      <h2 class="text-4xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <!-- Google Reviews Grid -->
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Skye's Review -->
+          <a href="https://g.co/kgs/A8Tu9Fu" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+              <img src="./images/Google-Review-Logo.png" alt="Google Review Logo" class="mx-auto mb-4 w-32 h-auto">
+              <p>"Chris masterfully supported me using the RRT method to clear a debilitating block impacting my work. I felt renewed peace and clarity after just one session."</p>
+              <p class="font-bold mt-2">- Skye Sinclair</p>
+          </a>
+          <!-- Richie's Review -->
+          <a href="https://g.co/kgs/riNTWWs" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+              <img src="./images/Google-Review-Logo.png" alt="Google Review Logo" class="mx-auto mb-4 w-32 h-auto">
+              <p>"Chris effectively guided me with thorough care. I highly recommend him as a competent practitioner of RRT."</p>
+              <p class="font-bold mt-2">- Richie Budd</p>
+          </a>
+          <!-- Nicholas's Review -->
+          <a href="https://g.co/kgs/J5djHjq" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+              <img src="./images/Google-Review-Logo.png" alt="Google Review Logo" class="mx-auto mb-4 w-32 h-auto">
+              <p>"Chris’s method cleared away intrusive thoughts and helped me focus on what truly mattered. Highly recommended for personal growth."</p>
+              <p class="font-bold mt-2">- Nicholas Owen</p>
+          </a>
+      </div>
+  
+      <!-- Yelp Reviews Grid -->
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <!-- Dennis's Review -->
+          <a href="https://www.yelp.com/biz/clearesolution-plantation?hrid=KdmFbm92ivsN-eWRUAgwsw" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+              <img src="./images/Yelp-Reviews-Logo.png" alt="Yelp Review Logo" class="mx-auto mb-4 w-32 h-auto">
+              <p>"I started seeing Chris during a major mental health crisis. His approach was the most effective therapy I’ve tried, helping me clear deep issues and equipping me with lasting tools for self-understanding."</p>
+              <p class="font-bold mt-2">- Dennis J.</p>
+          </a>
+          <!-- Jeannie's Review -->
+          <a href="https://www.yelp.com/biz/clearesolution-plantation?hrid=pPQxXQtNN-o4M94BEuxrwg" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+              <img src="./images/Yelp-Reviews-Logo.png" alt="Yelp Review Logo" class="mx-auto mb-4 w-32 h-auto">
+              <p>"I hit a wall in my studies and became increasingly depressed. After meeting with Chris, my fears were dispelled, and I felt excited about learning again. His support brought lasting positive change."</p>
+              <p class="font-bold mt-2">- Jeannie H.</p>
+          </a>
+          <!-- Heather's Review -->
+          <a href="https://www.yelp.com/biz/clearesolution-plantation?hrid=3Z94wqT5vO5RPSdaZeXdiQ" target="_blank" class="review text-center p-4 bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
+              <img src="./images/Yelp-Reviews-Logo.png" alt="Yelp Review Logo" class="mx-auto mb-4 w-32 h-auto">
+              <p>"As a biochemist and skeptic, I was amazed by how effective Chris’s session was. It accessed deep emotions more effectively than years of talk therapy or EMDR. I felt significant progress after just one session."</p>
+              <p class="font-bold mt-2">- Heather G.</p>
+          </a>
+      </div>
+  </div>
+
+<!-- Testimonial Grid Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+      <div class="aspect-square mb-4">
+        <img src="./images/testimonial_images/testimonial_image_1.png" alt="Dennis" class="w-full h-full object-cover rounded-lg" />
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Mental Health Breakthrough - Dennis J.</h3>
+      <p>"Life changing is a cliché term, but I really can't think of a better one. From crisis to extraordinary experience in one session."</p>
+    </div>
+  
+    <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+      <div class="aspect-square mb-4">
+        <img src="https://img.youtube.com/vi/xGEPFr_E3EQ/hqdefault.jpg" alt="Jay" class="thumbnail-style" />
+      </div>
+      <h3 class="text-2xl font-bold mb-4">ADHD Transformation - Jay</h3>
+      <p>Discovered how a "high-horsepower mind" can become your greatest asset</p>
+      <a href="https://youtube.com/shorts/xGEPFr_E3EQ" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition mx-auto">Watch Jay's Story</a>
+    </div>
+  
+    <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+      <div class="aspect-square mb-4">
+        <img src="https://img.youtube.com/vi/FLjFDH_yLoM/hqdefault.jpg" alt="Angela" class="thumbnail-style" />
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Communication Breakthrough - Angela</h3>
+      <p>Overcame severe communication barriers and found her voice</p>
+      <a href="https://youtube.com/shorts/FLjFDH_yLoM" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition mx-auto">Watch Angela's Story</a>
+    </div>
+  
+    <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+      <div class="aspect-square mb-4">
+        <img src="https://img.youtube.com/vi/RToYWzbZMSA/hqdefault.jpg" alt="Sasha" class="thumbnail-style" />
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Freedom from Anxiety - Sasha</h3>
+      <p>From constant worry to lasting peace in one session</p>
+      <a href="https://youtube.com/shorts/RToYWzbZMSA" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition mx-auto">Watch Sasha's Story</a>
+    </div>
+  
+    <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+      <div class="aspect-square mb-4">
+        <img src="https://img.youtube.com/vi/soLPmJw90tI/hqdefault.jpg" alt="Lindsey" class="thumbnail-style" />
+      </div>
+      <h3 class="text-2xl font-bold mb-4">Sleep Transformation - Lindsey</h3>
+      <p>From sleepless nights to peaceful rest</p>
+      <a href="https://youtu.be/soLPmJw90tI" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition mx-auto">Watch Lindsey's Story</a>
+    </div>
+
+    <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="https://img.youtube.com/vi/Si0AvX6jg94/hqdefault.jpg" alt="Mutlu" class="thumbnail-style" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Smoking Freedom - Mutlu</h3>
+        <p>Effortless transition to a smoke-free life in just one session</p>
+        <a href="https://youtu.be/Si0AvX6jg94" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition mx-auto">Watch Mutlu's Story</a>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="https://img.youtube.com/vi/a92N5WaQztQ/hqdefault.jpg" alt="Meridith" class="thumbnail-style" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Severe Insomnia Relief - Meridith Hart</h3>
+        <p>Meridith is a family member who had been experiencing extreme insomnia. She hadn't slept even a minute of sleep without medication in 6 months and no more than 2 hours in a 24 hour period. Incessant and uncontrollable thoughts racing in her mind, then terrible fear of not being able to sleep. She came to meet with me hopeless, she said this was her last resort, yet willing to do anything.</p>
+        <p>After just our first meeting she immediately laid down for her first 2 hours of natural sleep in many weeks! After a few more sessions it is completely cleared and she regularly sleeps 8-9 natural hours every night.</p>
+        <a href="https://youtu.be/a92N5WaQztQ" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition mx-auto mt-4">Watch Meridith's Story</a>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_8.png" alt="Aga" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Relief from Stress and Pain - Aga</h3>
+        <p>"Right after the session, I felt as if weight was lifted off my shoulders. The pain and stiffness in my neck and shoulder disappeared, and it hasn't returned since. I'm sleeping through the night and waking up refreshed."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_9.png" alt="Sue" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Improved Sleep - Sue</h3>
+        <p>"Hi Chris, I wanted to let you know I have been sleeping so much better and feeling better already. Thank you so much! I will be in touch for more sessions soon."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_10.png" alt="A" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Relationship Renewal - A</h3>
+        <p>"My partner and I are dating again, and we have a much healthier relationship now. The work with you was so helpful and insightful, a safe space to challenge my perspectives. We often quote you and aim to be 'that smooth MF'."</p>
+      </div>
+
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_11.png" alt="Tabre" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Anxiety and Brain Fog - Tabre</h3>
+        <p>"I had a night to remember last night with friends. We celebrated with food, drink, and great music. I was very grateful for this experience. In the morning, I was in a suit by 9:00a and hosting one of my open houses by 12:00p. Equally wonderful, I have been motivated, clearheaded, and not plagued by fog or anxiety attacks all day.</p>
+        <p>It's difficult to describe with words how happy this makes me! Green checkmarks all the way! Thank you Chris for all that you do to help me access my full power and clarity. It means more than I can express 🙏🏻💪🏻 God I could almost cry I am so thrilled that my brain is clear, happy, and motivated. Man, such a glorious existence not to be plagued."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_12.png" alt="Catherine" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Confidence - Catherine Hoort, J.D.</h3>
+        <p>"I had a session with Chris Richardson after he had been studying Rapid Resolution Therapy (RRT) for about a year. The session was amazing! I was having some confidence issues and Chris eliminated my fear and doubts.</p>
+        <p>After my session, Chris continued training and is now one of the few people selected to be classified as an RRT Specialist. This is the highest level of classification given by Dr. Jon Connelly to students of RRT. Chris is now a mentor for psychologists, social workers and other people interested in becoming skilled at Rapid Resolution Therapy. If you are interested in a powerful, transformation session, I highly recommend Chris Richardson. He is caring and skilled."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_13.png" alt="Elena" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Autoimmune/Endocrine Disorder - Elena</h3>
+        <p>"I recently worked with Chris at a Rapid Resolution Therapy training, and had a truly profound experience under his direction and care. Chris assisted me in clearing a concern about an autoimmune/endocrine disorder and related skin condition.</p>
+        <p>Through masterful use of advanced hypnotic processes, Chris skillfully led me into a deep and beautiful state of trance, where I encountered an inner library full of books on every topic at my disposal. I realized this library exists within my own unconscious mind, and is available to me at any time. I can simply find the book that corresponds with the issue, question, or concern I'm having, open the book and read the answer. I was then guided to follow those answers to even deeper levels of insight, clarity and peaceful healing.</p>
+        <p>Chris is incredibly kind, energetic, encouraging, and highly skilled. His training and experience using hypnosis to clear a wide-ranging variety of issues is obvious and impressive. I am very grateful to know him, and to have had the amazing opportunity to receive the benefits of his expertise. I highly recommend working with him!"</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_14.png" alt="Jeannie" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">The Process - Jeannie Thomas, CHT, CSC</h3>
+        <p>"Chris Richardson is my 'Go-To-Guy' when I want to shift a thought, feeling, or behavior that no longer serves me.</p>
+        <p>In a single conversation with him, I receive lasting and valuable results. I feel heard. The process is easy. A Shift Happens! ...and I move through life with more clarity, ease, and joy."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_15.png" alt="Josee" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Digestive Concern - Josee Clavel, Canada</h3>
+        <p>"Chris is an amazing magical hypnotic healer and was helpful with a digestive concern."</p>
+      </div>
+
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_16.png" alt="Kathy" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Unconscious Shifts - Kathy</h3>
+        <p>"I had an amazing session with Chris. His voice is very calming and he knew just what to say. He was able to get answers from my unconscious mind in such a unique way. I highly recommend working with Chris if you are ready for some life changing shifts."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_17.png" alt="Nadine" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Grief Over Husband's Suicide - Nadine</h3>
+        <p>"When I met Chris Richardson, I was at the lowest point of my life. I had recently witnessed my husband's suicide and was feeling depressed, guilty and ashamed of what had happened. I felt so terrible I was ready to end it all myself.</p>
+        <p>During our meeting, Chris was able to settle my nerves and help me feel relaxed and comfortable. Through his many years of hypnosis experience, Chris knew how to help me step out of the scene and detach from the situation. He was able to eliminate the depression, guilt and shame that had been paralyzing my life.</p>
+        <p>The results were instant and amazing. I feel so much better now. Working with Chris has given me my life back. I wake up in the morning refreshed, looking forward to the day's events. I'm riding my motorcycle again, figure skating, cooking and hanging out with friends. I am so grateful to have found Chris, and thankful that Chris was able to coach me through this very difficult situation."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_18.png" alt="Tani" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">General Sessions - Tani Morgan</h3>
+        <p>"I've seen Chris for hypnosis a couple of times, and both sessions left me giggling and feeling amazing! He's skilled, kind and uplifting. I highly recommend him."</p>
+      </div>
+    
+      <div class="bg-light p-6 rounded-lg shadow-lg hover:bg-secondary transition duration-300 flex flex-col">
+        <div class="aspect-square mb-4">
+          <img src="./images/testimonial_images/testimonial_image_19.png" alt="Melissa" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Clearing Issues - Melissa</h3>
+        <p>"Chris is a natural healer. I feel so comfortable when I am with him. His energy automatically lifted me up! It took him a very short time to clear something up for me. I was amazed!"</p>
+      </div>
+    </div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-secondary text-white py-8">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="mb-4">© 2024 CleaResolution. All Rights Reserved.  |  Website Design by <a href="http://www.coryboehne.com">Cory Boehne</a></p>
+      <a class="text-white underline" href="https://calendly.com/clearesolution/15min" target="_blank">Book a Free Consultation</a>
+  </div>
+
+</footer>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contentSections = document.querySelectorAll('.fade-in-content, .hero-section'); // Target multiple sections if needed
+
+        contentSections.forEach(content => {
+            if (content) {
+                // Initialize fade-in effect on page load
+                content.classList.add('fade-in-content');
+
+                // Listen for navigation link clicks
+                document.querySelectorAll('a[href$=".html"]').forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        // Only handle internal navigation
+                        if (link.href.includes(window.location.origin)) {
+                            event.preventDefault(); // Prevent default navigation
+                            content.classList.add('fade-out-content'); // Start fade-out animation
+
+                            // Navigate after the animation duration
+                            setTimeout(() => {
+                                window.location.href = link.getAttribute('href');
+                            }, 800); // Ensure this matches your CSS animation duration
+                        }
+                    });
+                });
+
+                // Handle the pageshow event to reset classes when navigating back
+                window.addEventListener('pageshow', (event) => {
+                    content.classList.remove('fade-out-content');
+                    content.classList.add('fade-in-content');
+                });
+            }
+        });
+    });
+</script>
+
+</div><script>
+    document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.stopPropagation();  // Prevent click from bubbling up
+        toggleMenu();
+    });
+
+    // Function to handle menu state
+    function toggleMenu(shouldClose = false) {
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const fullMenu = document.getElementById('full-menu');
+        
+        if (shouldClose || !fullMenu.classList.contains('hidden')) {
+            // Close menu
+            fullMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        } else {
+            // Open menu
+            fullMenu.classList.remove('hidden');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Close menu when clicking anywhere in the menu area (except links)
+    document.getElementById('full-menu').addEventListener('click', function(e) {
+        if (e.target === this || e.target.classList.contains('h-full')) {
+            toggleMenu(true);
+        }
+    });
+
+    // Prevent clicks inside menu items from closing the menu
+    document.querySelector('#full-menu .space-y-6').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
+
+</body>
+</html>

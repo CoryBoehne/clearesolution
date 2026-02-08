@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+
+<title>Blog | CleaResolution</title>
+<style>
+
+
+:root {
+    --primary: #b9d7d0;
+    --secondary: #a8bdc1;
+    --light: #eeeeee;
+    --cta-color: #5e8b95;
+}
+
+body {
+    background-color: var(--primary);
+    font-family: 'Arial', sans-serif;
+    color: #373737;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.nav-item:hover {
+    background-color: var(--secondary);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    white-space: nowrap;
+    padding: 10px 0;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--secondary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(168, 189, 193, 0.3), rgba(185, 215, 208, 0.3)), 
+                url('./images/image17.jpg') center/cover no-repeat;
+    height: 400px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--cta-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a6f7a;
+}
+
+/* Menu styles */
+#full-menu {
+    transition: opacity 0.3s ease;
+}
+
+#full-menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Hide old menu elements */
+.menu-container,
+.dropdown,
+.dropdown-menu,
+.nav-item {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .menu-container {
+        justify-content: flex-start; /* Align menu items to the left */
+    }
+}
+
+/* Fade effects */
+.fade-in-content {
+    opacity: 0;
+    animation: fadeInContent 1s ease-in-out forwards;
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out-content {
+    animation: fadeOutContent 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOutContent {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Container to center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.centered-image {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+}
+
+
+</style>
+
+
+</head>
+<body>
+<!-- Navigation Bar -->
+
+<nav class="bg-white shadow-lg w-full sticky-nav">
+    <div class="flex items-center justify-between w-full px-4">
+        <!-- Left: Logo -->
+        <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/favicon.png" alt="CleaResolution Logo" class="h-8 md:h-10" style="max-width: 55px; height: auto; margin-right: 0px;">
+                <span style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-size: 3rem; font-weight: 700; white-space: nowrap; margin-left: 4px;" class="text-black">
+                    CleaResolution
+                </span>
+            </a>
+        </div>
+
+        <!-- Center: CTA Button -->
+        <div class="hidden md:block">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+
+        <!-- Right: Hamburger Button -->
+        <button id="menu-toggle" class="p-2">
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Full Screen Menu -->
+<div id="full-menu" class="fixed inset-0 bg-white z-50 hidden">
+    <div class="h-full overflow-y-auto py-16 px-6">
+        <!-- Mobile CTA -->
+        <div class="mb-8 text-center">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="space-y-6">
+            <!-- Our Company -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Our Company</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="about-our-story-animated.html" class="block py-2 text-gray-600 hover:text-gray-900">Our Story</a>
+                    <a href="about-credentials.html" class="block py-2 text-gray-600 hover:text-gray-900">Credentials</a>
+                    <a href="contact.html" class="block py-2 text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+            </div>
+
+            <!-- Transformations -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Transformations</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="cases.html" class="block py-2 text-gray-600 hover:text-gray-900">Cases</a>
+                    <a href="testimonials.html" class="block py-2 text-gray-600 hover:text-gray-900">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Services</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="services-clearesolution.html" class="block py-2 text-gray-600 hover:text-gray-900">CleaResolution</a>
+                    <a href="services-rrt.html" class="block py-2 text-gray-600 hover:text-gray-900">RRT</a>
+                    <a href="services-nlp.html" class="block py-2 text-gray-600 hover:text-gray-900">NLP</a>
+                    <a href="services-hypnosis.html" class="block py-2 text-gray-600 hover:text-gray-900">Hypnosis</a>
+                    <a href="solutions.html" class="block py-2 text-gray-600 hover:text-gray-900">Solutions</a>
+                    <a href="services-coaching.html" class="block py-2 text-gray-600 hover:text-gray-900">Coaching</a>
+                    <a href="events.html" class="block py-2 text-gray-600 hover:text-gray-900">Events</a>
+                </div>
+            </div>
+
+            <!-- Resources -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold">Resources</h3>
+                <div class="pl-4 space-y-2">
+                    <a href="resources-blogs.html" class="block py-2 text-gray-600 hover:text-gray-900">Blogs</a>
+                    <a href="resources-audio.html" class="block py-2 text-gray-600 hover:text-gray-900">Audio</a>
+                    <a href="resources-videos.html" class="block py-2 text-gray-600 hover:text-gray-900">Videos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fade-in-content">
+    <!-- Your main content sections go here -->
+<!-- Hero Section for Blog -->
+<div class="hero-section flex items-center justify-center text-center">
+        <div class="max-w-4xl mx-auto px-4 text-white">
+            <h1 class="mb-8 text-8xl" style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-weight: 900;">Blog</h1>
+<p class="text-xl mb-8">Insights, Tips, and Expert Advice on Mental Wellness</p>
+</div>
+</div>
+<!-- Content Section for Blog Posts -->
+<div class="min-h-screen bg-white py-16">
+    <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-5xl font-bold text-center mb-8">The Transformative Power of Rapid Resolution Therapy (RRT)</h1>
+        <p class="text-xl mb-6">
+            Imagine waking up one day, unburdened by the emotional weight you've carried for years—perhaps decades. No more replaying painful memories, no more internal struggles holding you back. This isn’t just wishful thinking; this is the promise of Rapid Resolution Therapy (RRT). With unparalleled speed and precision, RRT addresses the roots of emotional distress, freeing you to live with clarity and joy in just a few sessions.
+        </p>
+        <p class="text-xl mb-6">
+            Unlike traditional approaches that require rehashing trauma or spending years in sessions, RRT redefines what’s possible. Through advanced neurological techniques, it engages your subconscious mind, dissolving the emotional charge tied to painful memories. The result? A profound sense of relief and freedom that clients often describe as life-changing.
+        </p>
+        <p class="text-xl mb-6">
+            What makes RRT even more revolutionary is how it bypasses the need to relive past hurts. Traditional methods risk reopening wounds, while RRT focuses on rewiring your brain’s response to those events. Imagine the relief of achieving resolution without having to dive into the depths of pain.
+        </p>
+
+        <h2 class="text-3xl font-bold mb-4">The CleaResolution Method: Elevating RRT to Mastery</h2>
+        <p class="text-xl mb-6">
+            Now, take that transformation to the next level with the CleaResolution Method, pioneered by Chris Richardson. This isn’t just RRT—it’s RRT supercharged. By combining decades of expertise in hypnosis, NLP, and advanced neurological strategies, the CleaResolution Method creates a dynamic, real-time experience tailored specifically to you. No scripts, no one-size-fits-all solutions—just a deeply personalized process that adapts to your energy, emotions, and needs.
+        </p>
+        <p class="text-xl mb-6">
+            Chris’s conversational and intuitive style transforms every session into a powerful, engaging journey. The changes you experience are immediate, natural, and permanent. Clients consistently report breakthroughs that ripple through every aspect of their lives, leaving them empowered and free.
+        </p>
+        <p class="text-xl mb-8">
+            You don’t have to spend years waiting for relief. With the CleaResolution Method, freedom from emotional pain is not just possible—it’s inevitable. Book your session today and step into the life you’ve been longing for.
+        </p>
+
+        <div class="text-center">
+            <a href="https://calendly.com/clearesolution/15min" class="cta-button bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">Book Your Free Consultation</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-secondary text-white py-8">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<p>© 2024 CleaResolution. All Rights Reserved.  |  Website Design by <a href="http://www.coryboehne.com">Cory Boehne</a></p>
+<a class="text-white underline" href="https://calendly.com/clearesolution/15min" target="_blank">Book a Free Consultation</a>
+</div>
+</footer>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contentSections = document.querySelectorAll('.fade-in-content, .hero-section'); // Target multiple sections if needed
+
+        contentSections.forEach(content => {
+            if (content) {
+                // Initialize fade-in effect on page load
+                content.classList.add('fade-in-content');
+
+                // Listen for navigation link clicks
+                document.querySelectorAll('a[href$=".html"]').forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        // Only handle internal navigation
+                        if (link.href.includes(window.location.origin)) {
+                            event.preventDefault(); // Prevent default navigation
+                            content.classList.add('fade-out-content'); // Start fade-out animation
+
+                            // Navigate after the animation duration
+                            setTimeout(() => {
+                                window.location.href = link.getAttribute('href');
+                            }, 800); // Ensure this matches your CSS animation duration
+                        }
+                    });
+                });
+
+                // Handle the pageshow event to reset classes when navigating back
+                window.addEventListener('pageshow', (event) => {
+                    content.classList.remove('fade-out-content');
+                    content.classList.add('fade-in-content');
+                });
+            }
+        });
+    });
+</script>
+
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function(e) {
+        e.stopPropagation();  // Prevent click from bubbling up
+        toggleMenu();
+    });
+
+    // Function to handle menu state
+    function toggleMenu(shouldClose = false) {
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const fullMenu = document.getElementById('full-menu');
+        
+        if (shouldClose || !fullMenu.classList.contains('hidden')) {
+            // Close menu
+            fullMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        } else {
+            // Open menu
+            fullMenu.classList.remove('hidden');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // Close menu when clicking anywhere in the menu area (except links)
+    document.getElementById('full-menu').addEventListener('click', function(e) {
+        if (e.target === this || e.target.classList.contains('h-full')) {
+            toggleMenu(true);
+        }
+    });
+
+    // Prevent clicks inside menu items from closing the menu
+    document.querySelector('#full-menu .space-y-6').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
+
+</body>
+
+</html>

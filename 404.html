@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+    <title>Page Not Found - CleaResolution</title>
+
+    <style>
+        :root {
+            --primary: #b9d7d0;
+            --secondary: #a8bdc1;
+            --light: #eeeeee;
+            --cta-color: #5e8b95;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--primary);
+            font-family: 'Qwitcher Grypen', cursive;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./images/image0.jpg') center/cover no-repeat;
+            opacity: 0;
+            animation: fadeInImage 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInImage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .title {
+            font-size: 6rem;
+            color: var(--light);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: fadeInText 1.5s ease-in-out 1.5s forwards;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .fade-out {
+            animation: fadeOut 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body onclick="triggerFadeOut()">
+
+    <div class="image-container"></div>
+    <div class="title">This page is still a dream</div>
+    
+    <script>
+        // Ensure session storage has the flag for site navigation
+        if (!sessionStorage.getItem('cameFromSite')) {
+            sessionStorage.setItem('cameFromSite', 'true');
+        }
+    
+        function triggerFadeOut() {
+            // Add fade-out class to body
+            document.body.classList.add('fade-out');
+            
+            // Trigger navigation after fade-out animation duration
+            setTimeout(() => {
+                const referrer = document.referrer; // Previous page URL
+                const currentHostname = window.location.hostname; // Current site's hostname
+                const cameFromSite = sessionStorage.getItem('cameFromSite') === 'true'; // Check session flag
+                
+                // Determine navigation logic
+                if ((referrer && new URL(referrer).hostname === currentHostname) || cameFromSite) {
+                    // Navigate back if the referrer is from the same domain or the user has navigated internally
+                    history.back();
+                } else {
+                    // Navigate to the intro page for external referrers
+                    window.location.href = "intro.html";
+                }
+            }, 1500); // Match fade-out duration
+        }
+    
+        // Automatically trigger fade-out after 5 seconds
+        setTimeout(triggerFadeOut, 5000);
+    
+        // Ensure fade-in animation is applied when navigating back/forward
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                document.body.classList.remove('fade-out');
+                document.body.classList.add('fade-in');
+            }
+        });
+    </script>
+    
+
+
+</body>
+</html>

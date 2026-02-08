@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E82CK9FFTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E82CK9FFTS');
+</script>
+
+<head>
+
+</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+
+<link rel="canonical" href="https://www.clearesolution.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=block" rel="stylesheet"></noscript>
+
+
+
+<title>Our Story | CleaResolution</title>
+<style>
+
+
+    :root {
+        --primary: #b9d7d0;
+        --secondary: #a8bdc1;
+        --light: #eeeeee;
+        --cta-color: #5e8b95;
+    }
+    
+    /* General body styles */
+    body {
+        background-color: var(--primary);
+        font-family: 'Arial', sans-serif;
+        color: #373737;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Navigation styles */
+    .nav-item:hover {
+        background-color: var(--secondary);
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: var(--primary);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        white-space: nowrap;
+        padding: 10px 0;
+        width: 200px;
+    }
+    
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .dropdown-menu a:hover {
+        background-color: var(--secondary);
+    }
+    
+    /* Sticky navigation bar */
+    .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Hero Section styles */
+    .hero-section {
+        position: relative;
+        height: 100vh; /* Full viewport height */
+        background: linear-gradient(rgba(168, 189, 193, 0.3), rgba(185, 215, 208, 0.3)), 
+                    url('./images/image26.jpg') center/cover no-repeat;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+    
+    .scrolling-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-image: 
+            linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0) 90%),
+            url('./images/image26.jpg');
+        background-size: auto 100%;
+        background-repeat: repeat-x;
+        animation: scrollBackground 60s linear infinite;
+    }
+    
+    @keyframes scrollBackground {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+    
+    .text-overlay h1 {
+        font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT';
+        font-size: calc(5vw + 3rem); /* Responsive font size */
+        font-weight: 900;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    
+    .text-overlay p {
+        font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT';
+        font-size: calc(4vw + 1.0rem);
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Call-to-Action button */
+    .cta-button {
+        background-color: var(--cta-color);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 9999px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+        background-color: #4a6f7a;
+    }
+    
+    /* Menu Container: Visibility and Scroll Behavior */
+    .menu-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    
+    .menu-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .menu-container a {
+        white-space: nowrap;
+    }
+    
+    /* Spacer */
+    .spacer {
+        height: 3.5rem;
+        max-height: 2vw;
+        width: 100%;
+    }
+    
+    /* Fade effects */
+    .fade {
+        opacity: 0;
+        transition: opacity 3s ease-in-out;
+    }
+    
+    .fade.show {
+        opacity: 1;
+    }
+    
+    .fade-in-content {
+        opacity: 0;
+        animation: fadeInContent 1s ease-in-out forwards;
+    }
+    
+    @keyframes fadeInContent {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    
+    .fade-out-content {
+        animation: fadeOutContent 0.8s ease-in-out forwards;
+    }
+    
+    @keyframes fadeOutContent {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .cta-button {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .logo-container {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 640px) {
+        .menu-container {
+            justify-content: flex-start;
+        }
+    }
+
+
+
+/* Container to center the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.centered-image {
+    height: 350px;
+    max-width: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+}
+
+
+</style>
+
+
+</head>
+<body>
+<!-- Navigation Bar -->
+
+<nav class="bg-white shadow-lg w-full sticky-nav">
+    <div class="flex items-center justify-between w-full px-4">
+        <!-- Left section with logo (ALL the way left) -->
+        <div class="flex-shrink-0 flex items-center logo-container">
+            <a href="index.html" class="flex items-center">
+                <img src="./images/favicon.png" alt="CleaResolution Logo" class="h-8 md:h-10" style="max-width: 55px; height: auto; margin-right: 0px;">
+                <span
+                    style="font-family: 'Qwitcher Grypen', cursive, 'Comic Sans MS', 'Brush Script MT', sans-serif; font-size: 3rem; font-weight: 700; white-space: nowrap; margin-left: 4px;"
+                    class="text-black"
+                >
+                    CleaResolution
+                </span>
+            </a>
+        </div>
+        <!-- Center section with navigation links -->
+<!-- Main Navigation Container --> 
+<div class="hidden md:flex items-center justify-center flex-grow space-x-4 menu-container">
+    
+    <!-- Our Company Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="about.html">
+            Our Company
+        </a>
+        <div class="dropdown-menu">
+            <a href="about-our-story-animated.html">Our Story</a>
+            <a href="about-credentials.html">Credentials</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Transformations Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="transformations.html">
+            Transformations
+        </a>
+        <div class="dropdown-menu">
+            <a href="cases.html">Cases</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+    </div>
+
+    <!-- Services Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="services.html">
+            Services
+        </a>
+        <div class="dropdown-menu">
+            <a href="services-clearesolution.html">CleaResolution</a>
+            <a href="services-rrt.html">RRT</a>
+            <a href="services-nlp.html">NLP</a>
+            <a href="services-hypnosis.html">Hypnosis</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="services-coaching.html">Coaching</a>
+            <a href="events.html">Events</a>
+        </div>
+    </div>
+
+    <!-- Resources Dropdown -->
+    <div class="dropdown">
+        <a class="py-2 px-2 nav-item" href="resources.html">
+            Resources
+        </a>
+        <div class="dropdown-menu">
+            <a href="resources-blogs.html">Blogs</a>
+            <a href="resources-audio.html">Audio</a>
+            <a href="resources-videos.html">Videos</a>
+        </div>
+    </div>
+
+</div>
+        <!-- Right section with CTA button (ALL the way right) -->
+        <div class="flex-shrink-0 cta-container">
+            <a class="cta-button" href="https://calendly.com/clearesolution/15min" target="_blank">
+                Book a Free Consultation
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="fade-in-content">
+    <!-- Your main content sections go here -->
+
+<!-- Full-Page Scrolling Hero Section -->
+<div class="hero-section">
+    <div class="scrolling-background"></div>
+    <div class="text-overlay">
+        <h1 id="hero-title" style="margin: 0; padding: 0; line-height: 1;">Our Story</h1>
+        <div class="spacer"></div>
+        <p id="hero-subtitle" style="margin: 0; padding: 0; line-height: 1.1;">The Journey of CleaResolution: From Curiosity to Transformation</p>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-8">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<p>© 2024 CleaResolution. All Rights Reserved.  |  Website Design by <a href="http://www.coryboehne.com">Cory Boehne</a></p>
+<a class="text-white underline" href="https://calendly.com/clearesolution/15min" target="_blank">Book a Free Consultation</a>
+</div>
+</footer>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contentSections = document.querySelectorAll('.fade-in-content, .hero-section'); // Target multiple sections if needed
+
+        contentSections.forEach(content => {
+            if (content) {
+                // Initialize fade-in effect on page load
+                content.classList.add('fade-in-content');
+
+                // Listen for navigation link clicks
+                document.querySelectorAll('a[href$=".html"]').forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        // Only handle internal navigation
+                        if (link.href.includes(window.location.origin)) {
+                            event.preventDefault(); // Prevent default navigation
+                            content.classList.add('fade-out-content'); // Start fade-out animation
+
+                            // Navigate after the animation duration
+                            setTimeout(() => {
+                                window.location.href = link.getAttribute('href');
+                            }, 800); // Ensure this matches your CSS animation duration
+                        }
+                    });
+                });
+
+                // Handle the pageshow event to reset classes when navigating back
+                window.addEventListener('pageshow', (event) => {
+                    content.classList.remove('fade-out-content');
+                    content.classList.add('fade-in-content');
+                });
+            }
+        });
+    });
+</script>
+
+<!-- JavaScript for Text Sequence -->
+<script>
+    const titles = [
+        "Our Story",
+        "Curiosity to Breakthrough",
+        "Beyond Traditional Therapy",
+        "A Moment of Clarity",
+        "The Birth of CleaResolution",
+        "A New Approach",
+        "Adapting for Real-Time Change",
+        "Results Beyond the Ordinary",
+        "A Method Proven in Practice",
+        "Chris Richardson: The Visionary",
+        "Next Step: Transformation"
+    ];
+    const subtitles = [
+        "The Journey of CleaResolution: From Curiosity to Transformation",
+        "What began as a search for answers became the foundation of a revolutionary method.",
+        "Chris Richardson sought more than what conventional approaches like NLP and hypnosis could offer.",
+        "Through deep exploration, a unique insight emerged: true change requires dynamic, tailored methods.",
+        "CleaResolution was born, integrating the best of various modalities into one powerful system.",
+        "Combining elements of NLP, hypnosis, and beyond, it transcends the limitations of any single approach.",
+        "With a jazz-like flow, CleaResolution adapts in real-time, meeting clients where they are.",
+        "Unlike traditional therapy, this method creates profound shifts without prolonged sessions.",
+        "Tested and refined over years, it consistently delivers fast, lasting change.",
+        "Chris Richardson’s journey from practitioner to teacher has empowered countless others.",
+        "Now, it’s your turn to experience the difference. Start your transformation today."
+    ];
+    
+    let index = 0;
+    let finalSlideDisplayed = false;
+    let timeoutId;
+    
+    function updateHeroText() {
+        const titleElement = document.getElementById("hero-title");
+        const subtitleElement = document.getElementById("hero-subtitle");
+    
+        titleElement.textContent = titles[index];
+        subtitleElement.textContent = subtitles[index];
+    
+        if (index === titles.length - 1) {
+            if (!finalSlideDisplayed) {
+                finalSlideDisplayed = true;
+                // Display CTA button with spacing
+                subtitleElement.innerHTML += `<div style="margin-top: 40px;"><a href="https://calendly.com/clearesolution/15min" class="cta-button">Start Your Transformation</a></div>`;
+                // Hold the final slide for 10 seconds before redirecting
+                timeoutId = setTimeout(() => {
+                    window.location.href = "about-our-story.html";
+                }, 8000);
+            }
+        } else {
+            index++;
+            timeoutId = setTimeout(updateHeroText, 5000);
+        }
+    }
+    
+    // Click anywhere on the hero section to advance the slide
+    document.querySelector('.hero-section').addEventListener('click', () => {
+        if (index < titles.length - 1 || !finalSlideDisplayed) {
+            clearTimeout(timeoutId);
+            updateHeroText();
+        } else {
+            window.location.href = "about-our-story.html";
+        }
+    });
+    
+    // Start the sequence
+    updateHeroText();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const content = document.querySelector('.hero-section'); // Main content section
+            content.classList.add('fade'); // Initialize with fade class
+    
+            // Fade in the content on page load
+            setTimeout(() => {
+                content.classList.add('show');
+            }, 100);
+    
+            // Listen for navigation link clicks
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    // Only fade out for internal navigation
+                    if (link.href.includes(window.location.origin)) {
+                        event.preventDefault();
+                        content.classList.remove('show');
+                        setTimeout(() => {
+                            window.location.href = link.href;
+                        }, 500); // Match the duration of the fade-out effect
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
